@@ -1,0 +1,24 @@
+<form action="/InsertarDatos" method="POST">
+    <h2>Tarea 1 - Seguridad informática</h2>
+    <div>
+        <input type="text" name='cadena' placeholder="Insertar cadena"/>
+        <button type="submit">Cifrar</button>
+    </div>
+    <br/>
+    <div>
+        <input type="text" name='cadenaCifrada' placeholder="Insertar cadena cifrada"/>
+        <button type="submit">Descifrar</button>
+    </div>
+    <br/>
+    <div>
+        <input type="text" name='valoresCifrados' size="55%" placeholder="Insertar valores cifrados, ejemplo: 2151 1159 1749 966 2442 1320"/>
+        <button type="submit">Descifrar</button>
+    </div>
+</form>
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages%}
+        <p>{{message}}</p>
+        {% endfor %}
+    {% endif%}
+{% endwith %}
